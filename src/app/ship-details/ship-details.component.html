@@ -1,0 +1,10 @@
+<div *ngIf="ship">
+    <h3>{{ ship.name }}</h3>
+    <h4>{{ ship.registry }}</h4>
+    <h5>Cargo: {{ ship.cargo.summary }}</h5>
+    <button [disabled]="!ship.cargo.items" (click)="viewCargo()">View</button>
+    <app-cargo *ngIf="showCargo" [cargo]="ship.cargo"></app-cargo>
+    <h5>Departments</h5>
+    <button [disabled]="!ship.departments" (click)="viewDepartments()">View</button>
+    <app-departments *ngIf="showDepartments" [departments]="ship.departments"></app-departments>
+</div>

@@ -1,0 +1,6 @@
+<ul *ngIf="cargo">
+    <li *ngFor="let cargoItem of cargo.items">
+        {{ cargoItem.description }} - {{ cargoItem.mass }}
+    </li>
+</ul>
+

@@ -1,0 +1,9 @@
+<div>
+    <h2>Fleet</h2>
+    <ul>
+        <li *ngFor="let ship of ships$ | async">
+            {{ ship.name }}
+            <button [disabled]="!ship.registry" (click)="onShipSelected(ship)">View</button>
+        </li>
+    </ul>
+</div>

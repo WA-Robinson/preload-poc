@@ -1,0 +1,5 @@
+<ul *ngIf="departments">
+    <li *ngFor="let department of departments">
+        <strong>{{ department.name }}</strong> - {{ department.crew }} personnel
+    </li>
+</ul>
